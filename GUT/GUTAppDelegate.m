@@ -7,6 +7,13 @@
 //
 
 #import "GUTAppDelegate.h"
+#import "MainViewController.h"
+
+@interface GUTAppDelegate ()
+
+@property (nonatomic,strong)  MainViewController *mainViewController;
+
+@end
 
 @implementation GUTAppDelegate
 
@@ -17,6 +24,12 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    // 1. Create the master View Controller
+    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    
+    // 2. Add the view controller to the Window's content view
+    [self.window.contentView addSubview:self.mainViewController.view];
+    self.mainViewController.view.frame = ((NSView*)self.window.contentView).bounds;
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.amol.GUT" in the user's Application Support directory.

@@ -19,6 +19,12 @@
 		F8F6210D188C43510040F1AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F620E9188C43500040F1AD /* Cocoa.framework */; };
 		F8F62115188C43510040F1AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8F62113188C43510040F1AD /* InfoPlist.strings */; };
 		F8F62117188C43510040F1AD /* GUTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62116188C43510040F1AD /* GUTTests.m */; };
+		F8F62124188C43950040F1AD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62122188C43950040F1AD /* MainViewController.m */; };
+		F8F62125188C43950040F1AD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F62123188C43950040F1AD /* MainViewController.xib */; };
+		F8F6212A188C7BD80040F1AD /* GUTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62129188C7BD80040F1AD /* GUTConfig.m */; };
+		F8F6212E188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6212D188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m */; };
+		F8F62132188C80540040F1AD /* GUTTerminalContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62131188C80540040F1AD /* GUTTerminalContext.m */; };
+		F8F62136188CA15D0040F1AD /* GUTTerminalStrategyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62135188CA15D0040F1AD /* GUTTerminalStrategyFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,18 @@
 		F8F62112188C43510040F1AD /* GUTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GUTTests-Info.plist"; sourceTree = "<group>"; };
 		F8F62114188C43510040F1AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8F62116188C43510040F1AD /* GUTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUTTests.m; sourceTree = "<group>"; };
+		F8F62121188C43950040F1AD /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F8F62122188C43950040F1AD /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F8F62123188C43950040F1AD /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F8F62128188C7BD80040F1AD /* GUTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTConfig.h; sourceTree = "<group>"; };
+		F8F62129188C7BD80040F1AD /* GUTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTConfig.m; sourceTree = "<group>"; };
+		F8F6212B188C7DE30040F1AD /* GUTTerminalStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUTTerminalStrategy.h; sourceTree = "<group>"; };
+		F8F6212C188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalVerifyFolderConcreteStrategy.h; sourceTree = "<group>"; };
+		F8F6212D188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalVerifyFolderConcreteStrategy.m; sourceTree = "<group>"; };
+		F8F62130188C80540040F1AD /* GUTTerminalContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalContext.h; sourceTree = "<group>"; };
+		F8F62131188C80540040F1AD /* GUTTerminalContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalContext.m; sourceTree = "<group>"; };
+		F8F62134188CA15D0040F1AD /* GUTTerminalStrategyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalStrategyFactory.h; sourceTree = "<group>"; };
+		F8F62135188CA15D0040F1AD /* GUTTerminalStrategyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalStrategyFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +135,11 @@
 		F8F620EF188C43510040F1AD /* GUT */ = {
 			isa = PBXGroup;
 			children = (
+				F8F62128188C7BD80040F1AD /* GUTConfig.h */,
+				F8F62129188C7BD80040F1AD /* GUTConfig.m */,
+				F8F62127188C7B9C0040F1AD /* Protocols */,
+				F8F62126188C7B460040F1AD /* Strategies */,
+				F8F62120188C437A0040F1AD /* MainViewController */,
 				F8F620FB188C43510040F1AD /* GUTAppDelegate.h */,
 				F8F620FC188C43510040F1AD /* GUTAppDelegate.m */,
 				F8F620FE188C43510040F1AD /* MainMenu.xib */,
@@ -155,6 +178,53 @@
 				F8F62113188C43510040F1AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8F62120188C437A0040F1AD /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8F62121188C43950040F1AD /* MainViewController.h */,
+				F8F62122188C43950040F1AD /* MainViewController.m */,
+				F8F62123188C43950040F1AD /* MainViewController.xib */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		F8F62126188C7B460040F1AD /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				F8F62133188C9FEF0040F1AD /* Factory */,
+				F8F6212F188C80390040F1AD /* Context */,
+				F8F6212C188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.h */,
+				F8F6212D188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m */,
+			);
+			name = Strategies;
+			sourceTree = "<group>";
+		};
+		F8F62127188C7B9C0040F1AD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F8F6212B188C7DE30040F1AD /* GUTTerminalStrategy.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F8F6212F188C80390040F1AD /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				F8F62130188C80540040F1AD /* GUTTerminalContext.h */,
+				F8F62131188C80540040F1AD /* GUTTerminalContext.m */,
+			);
+			name = Context;
+			sourceTree = "<group>";
+		};
+		F8F62133188C9FEF0040F1AD /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F8F62134188CA15D0040F1AD /* GUTTerminalStrategyFactory.h */,
+				F8F62135188CA15D0040F1AD /* GUTTerminalStrategyFactory.m */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +306,7 @@
 			files = (
 				F8F620F4188C43510040F1AD /* InfoPlist.strings in Resources */,
 				F8F62105188C43510040F1AD /* Images.xcassets in Resources */,
+				F8F62125188C43950040F1AD /* MainViewController.xib in Resources */,
 				F8F620FA188C43510040F1AD /* Credits.rtf in Resources */,
 				F8F62100188C43510040F1AD /* MainMenu.xib in Resources */,
 			);
@@ -258,7 +329,12 @@
 			files = (
 				F8F620F6188C43510040F1AD /* main.m in Sources */,
 				F8F62103188C43510040F1AD /* GUT.xcdatamodeld in Sources */,
+				F8F6212E188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m in Sources */,
+				F8F6212A188C7BD80040F1AD /* GUTConfig.m in Sources */,
+				F8F62132188C80540040F1AD /* GUTTerminalContext.m in Sources */,
 				F8F620FD188C43510040F1AD /* GUTAppDelegate.m in Sources */,
+				F8F62136188CA15D0040F1AD /* GUTTerminalStrategyFactory.m in Sources */,
+				F8F62124188C43950040F1AD /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
