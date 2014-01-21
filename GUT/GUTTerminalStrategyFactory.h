@@ -13,4 +13,6 @@
 
 +(GUTTerminalContext*)createVerifyFolderContext;
 
++(GUTTerminalContext*)createCommitContext;
+
 @end

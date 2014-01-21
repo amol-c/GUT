@@ -8,11 +8,23 @@
 
 #import "GUTTerminalStrategyFactory.h"
 #import "GUTTerminalVerifyFolderConcreteStrategy.h"
+#import "GUTTerminalCommitConcreteStrategy.h"
+
+
 @implementation GUTTerminalStrategyFactory
 
 +(GUTTerminalContext*)createVerifyFolderContext{
     
     id<GUTTerminalStrategy> strategy = [[GUTTerminalVerifyFolderConcreteStrategy alloc]init];
+    GUTTerminalContext *context = [[GUTTerminalContext alloc]init];
+    
+    [context setStrategy:strategy];
+    return context;
+}
+
++(GUTTerminalContext*)createCommitContext{
+    
+    id<GUTTerminalStrategy> strategy = [[GUTTerminalCommitConcreteStrategy alloc]init];
     GUTTerminalContext *context = [[GUTTerminalContext alloc]init];
     
     [context setStrategy:strategy];

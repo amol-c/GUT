@@ -13,4 +13,5 @@
 -(void)openDocumentWindow:(void (^)(NSString* urlName,NSArray *urlArray))block;
 -(void)alertWithMessage:(NSString*)message;
 
+-(NSString*)formatGitOutputConsoleForString:(NSString*)stringToFormat;
 @end

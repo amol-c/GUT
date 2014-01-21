@@ -12,4 +12,11 @@
 
 -(IBAction)addFolderWithGit:(id)sender;
 
+-(IBAction)addFilesToGit:(id)sender;
+-(IBAction)removeFilesFromGit:(id)sender;
+-(IBAction)commitChangesToGit:(id)sender;
+-(IBAction)pushToRemoteGit:(id)sender;
+-(IBAction)revertFileFromGit:(id)sender;
+-(IBAction)pullFromRemoteGit:(id)sender;
+
 @end

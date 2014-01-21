@@ -48,6 +48,10 @@
     [alert runModal];
 }
 
+-(NSString*)formatGitOutputConsoleForString:(NSString*)stringToFormat{
+    return [stringToFormat stringByReplacingOccurrencesOfString:@"#" withString:@"\n#"];
+}
+
 
 
 @end

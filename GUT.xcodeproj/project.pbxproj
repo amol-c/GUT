@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F83A0FA7188DEF240039A90E /* FileSystemItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F83A0FA6188DEF240039A90E /* FileSystemItem.m */; };
+		F83A0FB1188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */; };
 		F8F620EA188C43500040F1AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F620E9188C43500040F1AD /* Cocoa.framework */; };
 		F8F620F4188C43510040F1AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8F620F2188C43510040F1AD /* InfoPlist.strings */; };
 		F8F620F6188C43510040F1AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F620F5188C43510040F1AD /* main.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		F83A0FA5188DEF240039A90E /* FileSystemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystemItem.h; sourceTree = "<group>"; };
 		F83A0FA6188DEF240039A90E /* FileSystemItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystemItem.m; sourceTree = "<group>"; };
+		F83A0FAF188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalCommitConcreteStrategy.h; sourceTree = "<group>"; };
+		F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalCommitConcreteStrategy.m; sourceTree = "<group>"; };
 		F8F620E6188C43500040F1AD /* GUT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F620E9188C43500040F1AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F8F620EC188C43500040F1AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -264,6 +267,8 @@
 			children = (
 				F8F6212C188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.h */,
 				F8F6212D188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m */,
+				F83A0FAF188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.h */,
+				F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */,
 			);
 			name = ConcreteStrategies;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				F83A0FA7188DEF240039A90E /* FileSystemItem.m in Sources */,
 				F8F62124188C43950040F1AD /* MainViewController.m in Sources */,
 				F8F6213C188CB6530040F1AD /* GUTHelperConcreteDelegate.m in Sources */,
+				F83A0FB1188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

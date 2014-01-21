@@ -17,6 +17,8 @@
 @property(strong)id <GUTHelperDelegate> helperDelegate;
 
 @property(nonatomic,weak)IBOutlet NSOutlineView *gutSidebarExplorer;
+@property(nonatomic)IBOutlet NSTextView *consoleTextView;
+
 @property(nonatomic)NSMutableArray *outlineDataSource;
 
 @end
@@ -83,6 +85,30 @@
 }
 
 
+-(IBAction)addFilesToGit:(id)sender{
+    
+}
+-(IBAction)removeFilesFromGit:(id)sender{
+    
+}
+-(IBAction)commitChangesToGit:(id)sender{
+    
+    GUTTerminalContext *context = [GUTTerminalStrategyFactory createCommitContext];
+    
+    NSString *pathToRepo = [[_outlineDataSource objectAtIndex:0]relativePath];
+    NSString *output = [context execute:[[NSArray alloc]initWithObjects:pathToRepo,@"This is my commit message", nil]];
+    NSString *formattedOutput=[_helperDelegate formatGitOutputConsoleForString:output];
+    [_consoleTextView insertText:formattedOutput];
+}
+-(IBAction)pushToRemoteGit:(id)sender{
+    
+}
+-(IBAction)revertFileFromGit:(id)sender{
+    
+}
+-(IBAction)pullFromRemoteGit:(id)sender{
+    
+}
 
 
 -(IBAction)addFolderWithGit:(id)sender{
@@ -90,24 +116,28 @@
     
     if(control.selectedSegment==0){ //Add
         NSLog(@"%ld",(long)control.selectedSegment);
-        
-        GUTTerminalContext *context = [GUTTerminalStrategyFactory createVerifyFolderContext];
-        
-        [_helperDelegate openDocumentWindow:^(NSString *urlName,NSArray *urlArray) {
-            NSString *output = [context execute:[[NSArray alloc]initWithObjects:urlName, nil]];
-            NSString *outputUrl = [output stringByAppendingString:@"/"];
-            if ([outputUrl isEqualToString:@""]) {
-                [_helperDelegate alertWithMessage:@"This is not a GIT repository"];
-            }else{
-                [self updateDataWithUrlName:outputUrl];
-            }
-
-        }];
+        [self checkToAddDataToDatasource];
 
     }else{ //Remove
         NSLog(@"%ld",(long)control.selectedSegment);
-
     };
+}
+
+
+
+- (void)checkToAddDataToDatasource {
+    GUTTerminalContext *context = [GUTTerminalStrategyFactory createVerifyFolderContext];
+    
+    [_helperDelegate openDocumentWindow:^(NSString *urlName,NSArray *urlArray) {
+        NSString *output = [context execute:[[NSArray alloc]initWithObjects:urlName, nil]];
+        if ([output isEqualToString:@""]) {
+            [_helperDelegate alertWithMessage:@"This is not a GIT repository"];
+        }else{
+            NSString *outputUrl = [output stringByAppendingString:@"/"];
+            [self updateDataWithUrlName:outputUrl];
+        }
+        
+    }];
 }
 
 -(void)updateDataWithUrlName:(NSString*)urlName{
