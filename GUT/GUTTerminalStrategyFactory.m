@@ -12,11 +12,10 @@
 
 +(GUTTerminalContext*)createVerifyFolderContext{
     
-    GUTTerminalVerifyFolderConcreteStrategy *strategy = [[GUTTerminalVerifyFolderConcreteStrategy alloc]init];
+    id<GUTTerminalStrategy> strategy = [[GUTTerminalVerifyFolderConcreteStrategy alloc]init];
     GUTTerminalContext *context = [[GUTTerminalContext alloc]init];
     
     [context setStrategy:strategy];
-    
     return context;
 }
 

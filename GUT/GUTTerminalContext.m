@@ -10,8 +10,8 @@
 
 @implementation GUTTerminalContext
 
--(NSString*)execute{
-   NSString *cmdToExecute = [_strategy execute];
+-(NSString*)execute:(NSArray *)arg{
+   NSString *cmdToExecute = [_strategy execute:arg];
    return runCommand(cmdToExecute);
 }
 
@@ -41,7 +41,7 @@ NSString *runCommand(NSString *commandToRun)
     data = [file readDataToEndOfFile];
     
     NSString *output;
-    output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+    output = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     return output;
 }
 

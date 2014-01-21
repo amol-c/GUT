@@ -10,7 +10,6 @@
 
 @interface MainViewController : NSViewController
 
-@property(nonatomic,weak)IBOutlet NSTableView *gutTableView;
 -(IBAction)addFolderWithGit:(id)sender;
 
 @end

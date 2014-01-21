@@ -11,6 +11,6 @@
 @interface GUTTerminalContext : NSObject
 
 @property (strong) id<GUTTerminalStrategy> strategy;
--(NSString*)execute;
+-(NSString*)execute:(NSArray*)arg;
 
 @end

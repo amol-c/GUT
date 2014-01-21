@@ -10,6 +10,6 @@
 
 @protocol GUTTerminalStrategy <NSObject>
 @required
-- (NSString*) execute;
+- (NSString*) execute:(NSArray*)arg;
 
 @end
