@@ -10,7 +10,7 @@
 
 @implementation FileSystemItem
 
-static FileSystemItem *rootItem = nil;
+//static FileSystemItem *rootItem = nil;
 static NSMutableArray *leafNode = nil;
 
 + (void)initialize {
@@ -32,13 +32,16 @@ static NSMutableArray *leafNode = nil;
 }
 
 
+
+
+/*
 + (FileSystemItem *)rootItem {
     if (rootItem == nil) {
         rootItem = [[FileSystemItem alloc] initWithPath:@"/" parent:nil];
     }
     return rootItem;
 }
-
+*/
 
 // Creates, caches, and returns the array of children
 // Loads children incrementally
@@ -87,6 +90,15 @@ static NSMutableArray *leafNode = nil;
     
     // recurse up the hierarchy, prepending each parent’s path
     return [[parent fullPath] stringByAppendingPathComponent:relativePath];
+}
+
+- (FileSystemItem *)rootItem{
+    
+    if (parent == nil) {
+        return  self;
+    }
+    return  [parent rootItem];
+    
 }
 
 
