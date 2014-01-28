@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GUTTerminalStrategy.h"
 
-@interface GUTTerminalAddStrategy : NSObject
+@interface GUTTerminalAddStrategy : NSObject<GUTTerminalStrategy>
 
 @end

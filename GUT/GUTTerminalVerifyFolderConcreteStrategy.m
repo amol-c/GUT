@@ -8,7 +8,8 @@
 
 #import "GUTTerminalVerifyFolderConcreteStrategy.h"
 #import <SecurityFoundation/SFAuthorization.h>
-
+#import "GUTHelperConcreteDelegate.h"
+#import "GUTHelperDelegate.h"
 
 @implementation GUTTerminalVerifyFolderConcreteStrategy
 
@@ -18,9 +19,12 @@
     NSString *gitProjectPath = [arg objectAtIndex:0];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ShellScripts/FolderTestScript" ofType:@"sh"];
+    NSString *cmdToRun = [NSString stringWithFormat:@"%@ %@",path,gitProjectPath];
     
-    //return [NSString stringWithFormat:@"%@ %@",@"chmod 755 ",path];
-    return [NSString stringWithFormat:@"%@ %@",path,gitProjectPath];
+    id<GUTHelperDelegate> helperDelegate = [[GUTHelperConcreteDelegate alloc]init];
+    NSString *output= [helperDelegate runCommand:cmdToRun];
+
+    return output;
     // return @"echo \"$(git rev-parse --show-toplevel)\"";
 }
 

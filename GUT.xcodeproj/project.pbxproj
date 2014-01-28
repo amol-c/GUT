@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F83A0FA7188DEF240039A90E /* FileSystemItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F83A0FA6188DEF240039A90E /* FileSystemItem.m */; };
 		F83A0FB1188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */; };
+		F8D7A126188F496300EDB56B /* ShellScripts in Resources */ = {isa = PBXBuildFile; fileRef = F8D7A125188F496300EDB56B /* ShellScripts */; };
+		F8D7A129188F4AF600EDB56B /* GUTTerminalSetPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7A128188F4AF600EDB56B /* GUTTerminalSetPermissions.m */; };
+		F8D7A12D188F5C3700EDB56B /* NSOutlineView+SelectedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7A12C188F5C3700EDB56B /* NSOutlineView+SelectedItems.m */; };
+		F8D7A130188F611100EDB56B /* GUTTerminalAddStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7A12F188F611100EDB56B /* GUTTerminalAddStrategy.m */; };
 		F8F620EA188C43500040F1AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F620E9188C43500040F1AD /* Cocoa.framework */; };
 		F8F620F4188C43510040F1AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8F620F2188C43510040F1AD /* InfoPlist.strings */; };
 		F8F620F6188C43510040F1AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F620F5188C43510040F1AD /* main.m */; };
@@ -28,7 +32,6 @@
 		F8F62132188C80540040F1AD /* GUTTerminalContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62131188C80540040F1AD /* GUTTerminalContext.m */; };
 		F8F62136188CA15D0040F1AD /* GUTTerminalStrategyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F62135188CA15D0040F1AD /* GUTTerminalStrategyFactory.m */; };
 		F8F6213C188CB6530040F1AD /* GUTHelperConcreteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6213B188CB6530040F1AD /* GUTHelperConcreteDelegate.m */; };
-		F8F6213E188CC2330040F1AD /* ShellScripts in Resources */ = {isa = PBXBuildFile; fileRef = F8F6213D188CC2330040F1AD /* ShellScripts */; };
 		F8F62142188CC5F80040F1AD /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F62141188CC5F70040F1AD /* SecurityFoundation.framework */; };
 		F8F62144188CC6C20040F1AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F62143188CC6C20040F1AD /* Security.framework */; };
 		F8F62146188CC6CC0040F1AD /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F62145188CC6CC0040F1AD /* SecurityInterface.framework */; };
@@ -49,6 +52,13 @@
 		F83A0FA6188DEF240039A90E /* FileSystemItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystemItem.m; sourceTree = "<group>"; };
 		F83A0FAF188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalCommitConcreteStrategy.h; sourceTree = "<group>"; };
 		F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalCommitConcreteStrategy.m; sourceTree = "<group>"; };
+		F8D7A125188F496300EDB56B /* ShellScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ShellScripts; path = GUT/ShellScripts; sourceTree = "<group>"; };
+		F8D7A127188F4AF600EDB56B /* GUTTerminalSetPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalSetPermissions.h; sourceTree = "<group>"; };
+		F8D7A128188F4AF600EDB56B /* GUTTerminalSetPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalSetPermissions.m; sourceTree = "<group>"; };
+		F8D7A12B188F5C3700EDB56B /* NSOutlineView+SelectedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+SelectedItems.h"; sourceTree = "<group>"; };
+		F8D7A12C188F5C3700EDB56B /* NSOutlineView+SelectedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutlineView+SelectedItems.m"; sourceTree = "<group>"; };
+		F8D7A12E188F611100EDB56B /* GUTTerminalAddStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTTerminalAddStrategy.h; sourceTree = "<group>"; };
+		F8D7A12F188F611100EDB56B /* GUTTerminalAddStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTTerminalAddStrategy.m; sourceTree = "<group>"; };
 		F8F620E6188C43500040F1AD /* GUT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F620E9188C43500040F1AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F8F620EC188C43500040F1AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -84,7 +94,6 @@
 		F8F62139188CB5D50040F1AD /* GUTHelperDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUTHelperDelegate.h; sourceTree = "<group>"; };
 		F8F6213A188CB6530040F1AD /* GUTHelperConcreteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTHelperConcreteDelegate.h; sourceTree = "<group>"; };
 		F8F6213B188CB6530040F1AD /* GUTHelperConcreteDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTHelperConcreteDelegate.m; sourceTree = "<group>"; };
-		F8F6213D188CC2330040F1AD /* ShellScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ShellScripts; path = GUT/ShellScripts; sourceTree = "<group>"; };
 		F8F62141188CC5F70040F1AD /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
 		F8F62143188CC6C20040F1AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F8F62145188CC6CC0040F1AD /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
@@ -123,10 +132,19 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
+		F8D7A12A188F5BF600EDB56B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7A12B188F5C3700EDB56B /* NSOutlineView+SelectedItems.h */,
+				F8D7A12C188F5C3700EDB56B /* NSOutlineView+SelectedItems.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		F8F620DD188C43500040F1AD = {
 			isa = PBXGroup;
 			children = (
-				F8F6213D188CC2330040F1AD /* ShellScripts */,
+				F8D7A125188F496300EDB56B /* ShellScripts */,
 				F8F620EF188C43510040F1AD /* GUT */,
 				F8F62110188C43510040F1AD /* GUTTests */,
 				F8F620E8188C43500040F1AD /* Frameworks */,
@@ -171,6 +189,7 @@
 			children = (
 				F8F62128188C7BD80040F1AD /* GUTConfig.h */,
 				F8F62129188C7BD80040F1AD /* GUTConfig.m */,
+				F8D7A12A188F5BF600EDB56B /* Categories */,
 				F83A0FA1188DEED30039A90E /* DataSource */,
 				F8F62138188CB59F0040F1AD /* HelperDelegates */,
 				F8F62126188C7B460040F1AD /* TerminalStrategies */,
@@ -269,6 +288,10 @@
 				F8F6212D188C7E7A0040F1AD /* GUTTerminalVerifyFolderConcreteStrategy.m */,
 				F83A0FAF188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.h */,
 				F83A0FB0188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m */,
+				F8D7A127188F4AF600EDB56B /* GUTTerminalSetPermissions.h */,
+				F8D7A128188F4AF600EDB56B /* GUTTerminalSetPermissions.m */,
+				F8D7A12E188F611100EDB56B /* GUTTerminalAddStrategy.h */,
+				F8D7A12F188F611100EDB56B /* GUTTerminalAddStrategy.m */,
 			);
 			name = ConcreteStrategies;
 			sourceTree = "<group>";
@@ -362,7 +385,7 @@
 			files = (
 				F8F620F4188C43510040F1AD /* InfoPlist.strings in Resources */,
 				F8F62105188C43510040F1AD /* Images.xcassets in Resources */,
-				F8F6213E188CC2330040F1AD /* ShellScripts in Resources */,
+				F8D7A126188F496300EDB56B /* ShellScripts in Resources */,
 				F8F62125188C43950040F1AD /* MainViewController.xib in Resources */,
 				F8F620FA188C43510040F1AD /* Credits.rtf in Resources */,
 				F8F62100188C43510040F1AD /* MainMenu.xib in Resources */,
@@ -390,10 +413,13 @@
 				F8F6212A188C7BD80040F1AD /* GUTConfig.m in Sources */,
 				F8F62132188C80540040F1AD /* GUTTerminalContext.m in Sources */,
 				F8F620FD188C43510040F1AD /* GUTAppDelegate.m in Sources */,
+				F8D7A12D188F5C3700EDB56B /* NSOutlineView+SelectedItems.m in Sources */,
+				F8D7A130188F611100EDB56B /* GUTTerminalAddStrategy.m in Sources */,
 				F8F62136188CA15D0040F1AD /* GUTTerminalStrategyFactory.m in Sources */,
 				F83A0FA7188DEF240039A90E /* FileSystemItem.m in Sources */,
 				F8F62124188C43950040F1AD /* MainViewController.m in Sources */,
 				F8F6213C188CB6530040F1AD /* GUTHelperConcreteDelegate.m in Sources */,
+				F8D7A129188F4AF600EDB56B /* GUTTerminalSetPermissions.m in Sources */,
 				F83A0FB1188E22B40039A90E /* GUTTerminalCommitConcreteStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

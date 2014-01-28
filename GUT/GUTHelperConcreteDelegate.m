@@ -11,6 +11,36 @@
 
 @implementation GUTHelperConcreteDelegate
 
+-(NSString*)runCommand:(NSString *)commandToRun;
+{
+    NSTask *task;
+    task = [[NSTask alloc] init];
+    [task setLaunchPath: @"/bin/sh"];
+    
+    NSArray *arguments = [NSArray arrayWithObjects:
+                          @"-c" ,
+                          [NSString stringWithFormat:@"%@", commandToRun],
+                          nil];
+    NSLog(@"run command: %@",commandToRun);
+    [task setArguments: arguments];
+    
+    NSPipe *pipe;
+    pipe = [NSPipe pipe];
+    [task setStandardOutput: pipe];
+    
+    NSFileHandle *file;
+    file = [pipe fileHandleForReading];
+    
+    [task launch];
+    
+    NSData *data;
+    data = [file readDataToEndOfFile];
+    
+    NSString *output;
+    output = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    return output;
+}
+
 
 -(void)openDocumentWindow:(void (^)(NSString* urlName ,NSArray *urlArray))blockName{
     NSOpenPanel* panel = [NSOpenPanel openPanel];

@@ -9,5 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NSOutlineView (SelectedItems)
+- (NSArray *)selectedItems;
+- (id)selectedItem;
+
+
 
 @end

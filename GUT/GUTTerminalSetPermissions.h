@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface GUTTerminalSetPermissions : NSObject
+#import "GUTTerminalStrategy.h"
+@interface GUTTerminalSetPermissions : NSObject<GUTTerminalStrategy>
 
 @end

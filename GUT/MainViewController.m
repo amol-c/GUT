@@ -12,6 +12,8 @@
 #import "GUTHelperDelegate.h"
 #import "GUTHelperConcreteDelegate.h"
 #import "FileSystemItem.h"
+#import "NSOutlineView+SelectedItems.h"
+
 
 @interface MainViewController ()
 @property(strong)id <GUTHelperDelegate> helperDelegate;
@@ -87,6 +89,27 @@
 
 -(IBAction)addFilesToGit:(id)sender{
     
+    NSArray *selectedItems = [_gutSidebarExplorer selectedItems];
+    if ([selectedItems count]) {
+        FileSystemItem *rootItem = [selectedItems objectAtIndex:0];
+        rootItem = [rootItem rootItem];
+        
+        NSMutableString *allPaths = [[NSMutableString alloc]init];
+        [allPaths appendString:[[rootItem fullPath] stringByAppendingString:@" "]];
+        
+    for (FileSystemItem *singleItem in selectedItems) {
+        NSString *fullSinglePath = [singleItem fullPath];
+        [allPaths appendString:[fullSinglePath stringByAppendingString:@" "]];
+    }
+    
+    GUTTerminalContext *context = [GUTTerminalStrategyFactory createAddContext];
+    
+    NSString *output = [context execute:[NSArray arrayWithObject:allPaths]];
+    NSString *formattedOutput=[_helperDelegate formatGitOutputConsoleForString:output];
+    [_consoleTextView insertText:formattedOutput];
+        
+    }
+
 }
 -(IBAction)removeFilesFromGit:(id)sender{
     

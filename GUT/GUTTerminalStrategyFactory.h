@@ -15,4 +15,8 @@
 
 +(GUTTerminalContext*)createCommitContext;
 
++(GUTTerminalContext*)createAddContext;
+
++(GUTTerminalContext*)createPermissionsContext;
+
 @end

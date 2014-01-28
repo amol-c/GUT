@@ -9,7 +9,8 @@
 #import "GUTTerminalStrategyFactory.h"
 #import "GUTTerminalVerifyFolderConcreteStrategy.h"
 #import "GUTTerminalCommitConcreteStrategy.h"
-
+#import "GUTTerminalSetPermissions.h"
+#import "GUTTerminalAddStrategy.h"
 
 @implementation GUTTerminalStrategyFactory
 
@@ -22,6 +23,15 @@
     return context;
 }
 
++(GUTTerminalContext*)createAddContext{
+    id<GUTTerminalStrategy> strategy = [[GUTTerminalAddStrategy alloc]init];
+    GUTTerminalContext *context = [[GUTTerminalContext alloc]init];
+    
+    [context setStrategy:strategy];
+    return context;
+
+}
+
 +(GUTTerminalContext*)createCommitContext{
     
     id<GUTTerminalStrategy> strategy = [[GUTTerminalCommitConcreteStrategy alloc]init];
@@ -30,5 +40,14 @@
     [context setStrategy:strategy];
     return context;
 }
+
++(GUTTerminalContext*)createPermissionsContext{
+    id<GUTTerminalStrategy> strategy = [[GUTTerminalSetPermissions alloc]init];
+    GUTTerminalContext *context = [[GUTTerminalContext alloc]init];
+    
+    [context setStrategy:strategy];
+    return context;
+}
+
 
 @end

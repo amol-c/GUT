@@ -7,6 +7,8 @@
 //
 
 #import "GUTTerminalCommitConcreteStrategy.h"
+#import "GUTHelperDelegate.h"
+#import "GUTHelperConcreteDelegate.h"
 
 @implementation GUTTerminalCommitConcreteStrategy
 
@@ -16,10 +18,12 @@
     NSString *commitMessage = [arg objectAtIndex:1];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ShellScripts/Commit" ofType:@"sh"];
-    //return [NSString stringWithFormat:@"%@ %@",@"chmod 755 ",path];
+    //e.g //Commit.sh /Users/Documents/xcode_projects/GUT "commit Message"
+    NSString *commandToRun =[NSString stringWithFormat:@"%@ %@ %@",path,gitProjectPath,commitMessage];
+    id<GUTHelperDelegate> helperDelegate = [[GUTHelperConcreteDelegate alloc]init];
+    NSString *output= [helperDelegate runCommand:commandToRun];
 
-    //Commit.sh /Users/Documents/xcode_projects/GUT "commit Message"
-    return [NSString stringWithFormat:@"%@ %@ %@",path,gitProjectPath,commitMessage];
+    return output;
 }
 
 @end

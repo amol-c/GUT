@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol GUTHelperDelegate <NSObject>
+-(NSString*)runCommand:(NSString *)commandToRun;
 
 -(void)openDocumentWindow:(void (^)(NSString* urlName,NSArray *urlArray))block;
 -(void)alertWithMessage:(NSString*)message;
-
 -(NSString*)formatGitOutputConsoleForString:(NSString*)stringToFormat;
 @end

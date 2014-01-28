@@ -8,6 +8,7 @@
 
 #import "GUTAppDelegate.h"
 #import "MainViewController.h"
+#import "GUTTerminalStrategyFactory.h"
 
 @interface GUTAppDelegate ()
 
@@ -27,6 +28,8 @@
     // 1. Create the master View Controller
     self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     
+    GUTTerminalContext *context = [GUTTerminalStrategyFactory createPermissionsContext];
+    [context execute:nil];
     // 2. Add the view controller to the Window's content view
     [self.window.contentView addSubview:self.mainViewController.view];
     self.mainViewController.view.frame = ((NSView*)self.window.contentView).bounds;
